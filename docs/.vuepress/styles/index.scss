@@ -1,0 +1,13 @@
+:root {
+    --c-brand: #5865F2;
+    --c-brand-light: #6b76f3;
+}
+
+html.dark {
+    --c-brand: #5865F2;
+    --c-brand-light: #6b76f3;
+}
+
+.home .hero img {
+    max-width: 250px;
+}
