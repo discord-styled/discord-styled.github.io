@@ -34,7 +34,8 @@ module.exports = {
     docsDir: 'docs',
     repoLabel: 'Docs Repository',
     lastUpdated: true,
-    editLinkText: 'Edit on GitHub',
+    editLinkText: 'Edit this page on GitHub',
+    contributors: false,
     navbar: [
       { text: 'Documentation', link: '/latest/', children: [
         { text: 'Guide', link: '/latest/', activeMatch: '^/api/', },
