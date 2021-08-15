@@ -64,6 +64,5 @@ module.exports = {
         ] }
       ]
     }
-  },
-  base: '/docs/'
+  }
 }
