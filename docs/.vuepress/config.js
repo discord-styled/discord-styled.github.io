@@ -59,7 +59,8 @@ module.exports = {
         { text: 'API Reference', children: [
           '/latest/api/README.md',
           '/latest/api/slash.md',
-          '/latest/api/permissions.md'
+          '/latest/api/permissions.md',
+          '/latest/api/buttons.md'
         ] }
       ]
     }

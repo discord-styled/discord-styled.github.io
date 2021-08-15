@@ -1,6 +1,6 @@
-# `discord_styled.slash` module
+# `discord_styled.slash`
 
-The slash module help us to handle slash commands structure
+The slash package help us to handle slash commands structure
 
 ## `@option` decorator
 
