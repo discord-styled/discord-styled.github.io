@@ -64,6 +64,5 @@ module.exports = {
         ] }
       ]
     }
-  },
-  dest: 'public'
+  }
 }
