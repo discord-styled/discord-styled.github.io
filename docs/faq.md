@@ -48,7 +48,7 @@ You can contact me on Discord, I'm gammx#0001, you can find me on the [discord-i
 
 if you like this lib:
 - You can join [interactions-styled server](https://discord.gg/kNYjuz2Jjv) to know all the news or ask something about the lib.
-- Give us a :star: on [interactions-styled github repo](https://github.com/discord-interactions-styled/discord-interactions-styled).
+- Give us a :star: on [interactions-styled github repo](https://github.com/discord-styled/discord-interactions-styled).
 - You can support by making pull requests, create issues, feature requests, or editing this documentation pages if I made some mistakes.
 
 Made with :heart: for the community.

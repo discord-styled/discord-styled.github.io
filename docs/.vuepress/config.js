@@ -29,7 +29,7 @@ module.exports = {
   themeConfig: {
     logo: '/images/logo_blurple.png',
     logoDark: '/images/logo.png',
-    repo: 'https://github.com/discord-interactions-styled/docs',
+    repo: 'https://github.com/discord-styled/discord-styled.github.io',
     editLink: true,
     docsDir: 'docs',
     repoLabel: 'Docs Repository',
@@ -41,7 +41,7 @@ module.exports = {
         { text: 'Guide', link: '/latest/', activeMatch: '^/api/', },
         { text: 'API Reference', link: '/latest/api/' }
       ] },
-      { text: 'GitHub', link: 'https://github.com/discord-interactions-styled/discord-interactions-styled' }
+      { text: 'GitHub', link: 'https://github.com/discord-styled/discord-interactions-styled' }
     ],
     sidebar: {
       '/latest/': [
