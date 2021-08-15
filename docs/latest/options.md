@@ -14,7 +14,7 @@ async def _hi(...)
 So, i want to create a `name` option for my command, check this out:
 
 <CodeGroup>
-  <CodeGroupItem title="STYLED" active>
+<CodeGroupItem title="STYLED" active>
 
 ```py
 from discord_styled.slash import option
@@ -24,8 +24,8 @@ from discord_styled.slash import option
 async def _hi(...)
 ```
 
-  </CodeGroupItem>
-  <CodeGroupItem title="BASE">
+</CodeGroupItem>
+<CodeGroupItem title="BASE">
 
 ```py
 from discord_slash.manage_commands import create_option
@@ -36,7 +36,7 @@ from discord_slash.manage_commands import create_option
 async def _hi(...)
 ```
 
-  </CodeGroupItem>
+</CodeGroupItem>
 </CodeGroup>
 
 `STYLED` is how we do it with `discord_styled` and `BASE` is how used to create options with `discord_slash`. Amazing right?
@@ -46,7 +46,7 @@ async def _hi(...)
 Now, it may not be the *great thing* BUT when we set more than one option, yeah, we see the diference:
 
 <CodeGroup>
-  <CodeGroupItem title="STYLED" active>
+<CodeGroupItem title="STYLED" active>
 
 ```py
 from discord_styled.slash import option
@@ -57,8 +57,8 @@ from discord_styled.slash import option
 @slash.slash(name="hi", description="Say hi to my bot!")
 async def _hi(...)
 ```
-  </CodeGroupItem>
-  <CodeGroupItem title="BASE">
+</CodeGroupItem>
+<CodeGroupItem title="BASE">
 
 ```py
 from discord_slash.manage_commands import create_option
@@ -70,7 +70,7 @@ from discord_slash.manage_commands import create_option
 ])
 async def _hi(...)
 ```
-  </CodeGroupItem>
+</CodeGroupItem>
 </CodeGroup>
 
 Much more clean and pretty.

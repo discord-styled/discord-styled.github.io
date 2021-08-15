@@ -9,7 +9,7 @@ Let's imagine I have a `/ban` command and I want that command to be usable only 
 First, we need to deny permission to all members on my guild, my guild's id is `123`:
 
 <CodeGroup>
-   <CodeGroupItem title="STYLED">
+<CodeGroupItem title="STYLED">
 
 ```py
 from discord_styled.permissions import deny_all
@@ -18,8 +18,8 @@ from discord_styled.permissions import deny_all
 @deny_all(123)
 ```
 
-   </CodeGroupItem>
-   <CodeGroupItem title="BASE">
+</CodeGroupItem>
+<CodeGroupItem title="BASE">
 
 ```py
 from discord_slash.utils.manage_commands import create_permission, SlashCommandPermissionType
@@ -31,7 +31,7 @@ from discord_slash.utils.manage_commands import create_permission, SlashCommandP
 })
 ```
 
-   </CodeGroupItem>
+</CodeGroupItem>
 </CodeGroup>
 
 Cool, isn't it?
@@ -41,7 +41,7 @@ Cool, isn't it?
 Now, let's imagine that I have this bot in 3 of my servers, their ids are `123`, `456` and `789`. This would be a total disaster with `discord_slash` BUT, we're lucky to have `discord_styled`:
 
 <CodeGroup>
-   <CodeGroupItem title="STYLED">
+<CodeGroupItem title="STYLED">
 
 ```py
 from discord_styled.permissions import deny_all
@@ -50,8 +50,8 @@ from discord_styled.permissions import deny_all
 @deny_all([123, 456, 789])
 ```
 
-   </CodeGroupItem>
-   <CodeGroupItem title="BASE">
+</CodeGroupItem>
+<CodeGroupItem title="BASE">
 
 ```py
 from discord_slash.utils.manage_commands import create_permission, SlashCommandPermissionType
@@ -69,7 +69,7 @@ from discord_slash.utils.manage_commands import create_permission, SlashCommandP
 })
 ```
 
-   </CodeGroupItem>
+</CodeGroupItem>
 </CodeGroup>
 
 ## Roles
@@ -79,7 +79,7 @@ from discord_slash.utils.manage_commands import create_permission, SlashCommandP
 So, we already denied permissions for `@everyone`, now we need to allow permissions for my `@mod` role which has a `555` id:
 
 <CodeGroup>
-   <CodeGroupItem title="STYLED">
+<CodeGroupItem title="STYLED">
 
 ```py
 from discord_styled.permissions import deny_all
@@ -89,7 +89,7 @@ from discord_styled.permissions import deny_all
 @allow_roles(123, [555])
 ```
 
-   </CodeGroupItem>
+</CodeGroupItem>
 <CodeGroupItem title="BASE">
 
 ```py
@@ -103,7 +103,7 @@ from discord_slash.utils.manage_commands import create_permission, SlashCommandP
 })
 ```
 
-   </CodeGroupItem>
+</CodeGroupItem>
 </CodeGroup>
 
 > Remember, `[555]` is my list of role ids i want to allow permissions to, if i want to add more role ids i can do it and set a list like this `[555, 222,...]`.
@@ -132,7 +132,7 @@ from discord_styled.permissions import deny_all, allow_roles, only_allow_roles
 Also, if we want to deny permissions for a set of roles, we have to do something like this:
 
 <CodeGroup>
-   <CodeGroupItem title="STYLED">
+<CodeGroupItem title="STYLED">
 
 ```py
 from discord_styled.permissions import deny_roles
@@ -141,8 +141,8 @@ from discord_styled.permissions import deny_roles
 @deny_roles(123, [555, 222])
 ```
 
-   </CodeGroupItem>
-   <CodeGroupItem title="BASE">
+</CodeGroupItem>
+<CodeGroupItem title="BASE">
 
 ```py
 from discord_slash.utils.manage_commands import create_permission, SlashCommandPermissionType
@@ -155,7 +155,7 @@ from discord_slash.utils.manage_commands import create_permission, SlashCommandP
 })
 ```
 
-   </CodeGroupItem>
+</CodeGroupItem>
 </CodeGroup>
 
 > Remember, `[555, 222]` is my list of role ids i want to deny permissions to, you can put any role ids you want in the list.
@@ -169,7 +169,7 @@ So, we ended with the roles part, now we can set up permissions for users too
 If I only want a group of users to be able to use my command I can do something like this:
 
 <CodeGroup>
-   <CodeGroupItem title="STYLED">
+<CodeGroupItem title="STYLED">
 
 ```py
 from discord_styled.permissions import deny_all, allow_users
@@ -179,8 +179,8 @@ from discord_styled.permissions import deny_all, allow_users
 @allow_users(123, [555, 222])
 ```
 
-   </CodeGroupItem>
-   <CodeGroupItem title="BASE">
+</CodeGroupItem>
+<CodeGroupItem title="BASE">
 
 ```py
 from discord_slash.utils.manage_commands import create_permission, SlashCommandPermissionType
@@ -194,7 +194,7 @@ from discord_slash.utils.manage_commands import create_permission, SlashCommandP
 })
 ```
 
-   </CodeGroupItem>
+</CodeGroupItem>
 </CodeGroup>
 
 ### Allow users on many guilds
@@ -202,7 +202,7 @@ from discord_slash.utils.manage_commands import create_permission, SlashCommandP
 And if my bot is on three of my servers, I can allow permissions for my folks in all of them:
 
 <CodeGroup>
-   <CodeGroupItem title="STYLED">
+<CodeGroupItem title="STYLED">
 
 ```py
 from discord_styled.permissions import deny_all, allow_users
@@ -212,8 +212,8 @@ from discord_styled.permissions import deny_all, allow_users
 @allow_users([123, 456, 789], [555, 222])
 ```
 
-   </CodeGroupItem>
-   <CodeGroupItem title="BASE">
+</CodeGroupItem>
+<CodeGroupItem title="BASE">
 
 ```py
 from discord_slash.utils.manage_commands import create_permission, SlashCommandPermissionType
@@ -237,7 +237,7 @@ from discord_slash.utils.manage_commands import create_permission, SlashCommandP
 })
 ```
 
-   </CodeGroupItem>
+</CodeGroupItem>
 </CodeGroup>
 
 > Please note that `[123, 456, 789]` is my list of guild ids is want to set permissions, and `[555, 222]` is the list of user ids i want to allow permissions to.
@@ -247,7 +247,7 @@ from discord_slash.utils.manage_commands import create_permission, SlashCommandP
 But for `discord_styled` even that looks ugly, so let's use a special decorator that mix `@deny_all` and `@allow_users`
 
 <CodeGroup>
-   <CodeGroupItem title="STYLED">
+<CodeGroupItem title="STYLED">
 
 ```py
 from discord_styled.permissions import only_allow_users
@@ -256,8 +256,8 @@ from discord_styled.permissions import only_allow_users
 @only_allow_users([123, 456, 789], [555, 222])
 ```
 
-   </CodeGroupItem>
-   <CodeGroupItem title="BASE">
+</CodeGroupItem>
+<CodeGroupItem title="BASE">
 
 ```py
 from discord_slash.utils.manage_commands import create_permission, SlashCommandPermissionType
@@ -281,7 +281,7 @@ from discord_slash.utils.manage_commands import create_permission, SlashCommandP
 })
 ```
 
-   </CodeGroupItem>
+</CodeGroupItem>
 </CodeGroup>
 
 ### Deny users
@@ -289,7 +289,7 @@ from discord_slash.utils.manage_commands import create_permission, SlashCommandP
 If we want to deny permissions to a group of users we have to do something like this:
 
 <CodeGroup>
-   <CodeGroupItem title="STYLED">
+<CodeGroupItem title="STYLED">
 
 ```py
 from discord_styled.permissions import deny_users
@@ -298,8 +298,8 @@ from discord_styled.permissions import deny_users
 @deny_users(123, [555, 222])
 ```
 
-   </CodeGroupItem>
-   <CodeGroupItem title="BASE">
+</CodeGroupItem>
+<CodeGroupItem title="BASE">
 
 ```py
 from discord_slash.utils.manage_commands import create_permission, SlashCommandPermissionType
@@ -312,7 +312,7 @@ from discord_slash.utils.manage_commands import create_permission, SlashCommandP
 })
 ```
 
-   </CodeGroupItem>
+</CodeGroupItem>
 </CodeGroup>
 
 If you want these permissions for many guilds just set a list of guild ids:
