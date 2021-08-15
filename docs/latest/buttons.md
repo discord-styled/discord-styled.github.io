@@ -7,7 +7,7 @@ Here we're gonna learn how to use buttons in the styled way *hell yeah*
 I just want a simple blue button with a message saying "Hi!", watch:
 
 <CodeGroup>
-<CodeGroupItem title="STYLED">
+  <CodeGroupItem title="STYLED">
 
 ```py
 from discord_styled.buttons import buttons, button
@@ -17,8 +17,8 @@ my_buttons = buttons(
 )
 ```
 
-</CodeGroupItem>
-<CodeGroupItem title="BASE">
+  </CodeGroupItem>
+  <CodeGroupItem title="BASE">
 
 ```py
 from discord_slash.utils.manage_components import create_button, create_actionrow
@@ -29,7 +29,7 @@ my_buttons = create_actionrow(
 )
 ```
 
-</CodeGroupItem>
+  </CodeGroupItem>
 </CodeGroup>
 
 ### More complex
@@ -37,7 +37,7 @@ my_buttons = create_actionrow(
 Let's create three buttons, different colors, custom ids and labels
 
 <CodeGroup>
-<CodeGroupItem title="STYLED">
+  <CodeGroupItem title="STYLED">
 
 ```py
 from discord_styled.buttons import buttons, button
@@ -49,8 +49,8 @@ my_buttons = buttons(
 )
 ```
 
-</CodeGroupItem>
-<CodeGroupItem title="BASE">
+  </CodeGroupItem>
+  <CodeGroupItem title="BASE">
 
 ```py
 from discord_slash.utils.manage_components import create_button, create_actionrow
@@ -63,7 +63,7 @@ my_buttons = create_actionrow(
 )
 ```
 
-</CodeGroupItem>
+  </CodeGroupItem>
 </CodeGroup>
 
 ### Sending the message
@@ -85,7 +85,7 @@ When responding, you have 3 choices in how you handle interactions, BUT, `discor
 This is the way how we do it:
 
 <CodeGroup>
-<CodeGroupItem title="STYLED">
+  <CodeGroupItem title="STYLED">
 
 ```py
 from discord_styled.buttons import wait_button
@@ -96,8 +96,8 @@ button_ctx = await wait_button(bot, my_buttons)
 await button_ctx.edit_origin(content="Let's gooo!")
 ```
 
-</CodeGroupItem>
-<CodeGroupItem title="BASE">
+  </CodeGroupItem>
+  <CodeGroupItem title="BASE">
 
 ```py
 from discord_slash.utils.manage_components import wait_for_component
@@ -108,7 +108,7 @@ button_ctx = await wait_for_component(bot, components=my_buttons)
 await button_ctx.edit_origin(content="Let's gooo!")
 ```
 
-</CodeGroupItem>
+  </CodeGroupItem>
 </CodeGroup>
 
 ## Reference
