@@ -4,6 +4,8 @@ Here we're gonna learn how to use buttons in the styled way *hell yeah*
 
 ## Creating a button
 
+### Basic button
+
 I just want a simple blue button with a message saying "Hi!", watch:
 
 <CodeGroup>
@@ -27,6 +29,38 @@ from discord_slash.model import ButtonStyle
 my_buttons = create_actionrow(
     create_button(style=ButtonStyle.primary, label="Hi!")
 )
+```
+
+</CodeGroupItem>
+</CodeGroup>
+
+### Link buttons <Badge type="tip" text="NEW ✨" vertical="middle" />
+
+Link buttons are a type of component button that redirects to a url direction on a browser:
+
+> `v0.3.2` auto-detect link buttons, so you don't have to define `style` anymore.
+
+<CodeGroup>
+<CodeGroupItem title="STYLED">
+
+```py
+from discord_styled.buttons import button
+
+# NOW
+button(label="Go to GitHub", url="https://github.com/discord-styled")
+
+# BEFORE
+button(style="URL", label="Go to GitHub", url="https://github.com/discord-styled")
+```
+
+</CodeGroupItem>
+<CodeGroupItem title="BASE">
+
+```py
+from discord_slash.utils.manage_components import create_button
+from discord_slash.model import ButtonStyle
+
+create_button(style=ButtonStyle.URL, label="Go to GitHub", url="https://github.com/discord-styled")
 ```
 
 </CodeGroupItem>

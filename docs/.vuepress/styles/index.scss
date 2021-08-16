@@ -1,6 +1,7 @@
 :root {
     --c-brand: #5865F2;
     --c-brand-light: #6b76f3;
+    --c-badge-tip: #1bb69f;
 }
 
 html.dark {
@@ -9,5 +10,5 @@ html.dark {
 }
 
 .home .hero img {
-    max-width: 250px;
+    max-width: 200px;
 }
