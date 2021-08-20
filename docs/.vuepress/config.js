@@ -50,6 +50,7 @@ module.exports = {
           '/latest/getting-started.md',
           '/latest/options.md',
           '/latest/permissions.md',
+          '/latest/permission-templates.md',
           '/latest/buttons.md',
           '/latest/selects.md',
           '/faq.md'
@@ -60,7 +61,15 @@ module.exports = {
           '/latest/api/README.md',
           '/latest/api/slash.md',
           '/latest/api/permissions.md',
-          '/latest/api/buttons.md'
+          '/latest/api/buttons.md',
+          { link: '/latest/api/utils/README.md', text: 'discord_styled.utils' }
+        ] }
+      ],
+      '/latest/api/utils/': [
+        { text: 'API Reference', children: [
+          { link: '/latest/api/README.md', text: 'Back' },
+          '/latest/api/utils/README.md',
+          '/latest/api/utils/permissions.md'
         ] }
       ]
     }
