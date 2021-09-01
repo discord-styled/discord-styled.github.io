@@ -49,15 +49,15 @@ If you're using option templates and don't work as expected please check if your
 ```py
 # CORRECT:
 
+@options(...)
+@options(...)
 @slash.slash(...)
-@options(...)
-@options(...)
 
 # INCORRECT:
 
-@options(...)
-@options(...)
 @slash.slash(...)
+@options(...)
+@options(...)
 ```
 
 ## 💬 If you have more questions...

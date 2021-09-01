@@ -57,8 +57,8 @@ And now go to your command file, import the `@options` decorator, import your te
 from discord_styled.slash import options
 from utils.py import my_options
 
-@slash.slash(...)
 @options(my_options)
+@slash.slash(...)
 ```
 
 And that's all!
