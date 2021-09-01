@@ -42,6 +42,24 @@ async def...
 async def...
 ```
 
+## Why my option templates have a wrong order?
+
+If you're using option templates and don't work as expected please check if your `@options` decorators are in the right position on your code:
+
+```py
+# CORRECT:
+
+@slash.slash(...)
+@options(...)
+@options(...)
+
+# INCORRECT:
+
+@options(...)
+@options(...)
+@slash.slash(...)
+```
+
 ## 💬 If you have more questions...
 
 You can contact me on Discord, I'm gammx#0001, you can find me on the [discord-interactions server](https://discord.gg/KkgMBVuEkx) too

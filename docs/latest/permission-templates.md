@@ -1,7 +1,5 @@
 # ✨ Permission Templates
 
-> This is new, comes since version `0.4.0`
-
 If your bot is on two or more servers and you want to apply the same permissions to a set of commands you can be a prisoner of this terrible monster:
 
 ```py

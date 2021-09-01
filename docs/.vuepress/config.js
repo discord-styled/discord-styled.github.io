@@ -49,6 +49,7 @@ module.exports = {
           '/latest/README.md',
           '/latest/getting-started.md',
           '/latest/options.md',
+          '/latest/option-templates.md',
           '/latest/permissions.md',
           '/latest/permission-templates.md',
           '/latest/buttons.md',
@@ -69,7 +70,8 @@ module.exports = {
         { text: 'API Reference', children: [
           { link: '/latest/api/README.md', text: 'Back' },
           '/latest/api/utils/README.md',
-          '/latest/api/utils/permissions.md'
+          '/latest/api/utils/permissions.md',
+          '/latest/api/utils/options.md'
         ] }
       ]
     }
